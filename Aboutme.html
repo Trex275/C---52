@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        About me
+    </title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>
+            Moksh Gandhi
+        </h1>
+
+        <div class="text">
+            <a href="./index.html">
+                <p>
+                    Home
+                </p>
+            </a>
+        </div>
+    </div>
+    <div class="B" style="max-width: 500px; margin-left: 500px;" >
+        <img src="./Icons/freefire.jpeg" alt="freefire jpeg" class="2021gaming" style="width: 100%;">
+        <img src="./Icons/header.jpg" alt="Amongus jpg" class="2021gaming" style="width: 100%;">
+        <img src="./Icons/gotham_knightsHD.jpg" alt="gotham knights jpg" class="2021gaming" style="width: 100%;">
+    </div>
+    <script>
+        var index = 0;
+        presentation();
+        function presentation(){
+            var i;
+            var x = document.getElementsByClassName("2021gaming");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none"   
+            }
+            index++;
+            if (index>x.length) {
+                index = 1;
+            }
+            x[index-1].style.display = "block";
+            setTimeout(presentation, 2000);
+        }
+    </script>
+
+
+</body>
+
+</html>
